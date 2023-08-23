@@ -9,9 +9,7 @@ function SignUp() {
   });
 
   const handleSignUp = () => {
-    alert(
-      `\nFirst Name: ${userDetails.firstName}\nLast Name: ${userDetails.lastName}\nEmail: ${userDetails.email}`
-    );
+    alert(`First Name: ${userDetails.firstName}\nLast Name: ${userDetails.lastName}\nEmail: ${userDetails.email}`);
   };
 
   
@@ -24,9 +22,7 @@ function SignUp() {
           <input
             type="text"
             value={userDetails.firstName}
-            onChange={(e) =>
-              setUserDetails({ ...userDetails, firstName: e.target.value })
-            }
+            onChange={(e) =>setUserDetails({ ...userDetails, firstName: e.target.value })}
           />
         </div>
         <div>
@@ -34,9 +30,7 @@ function SignUp() {
           <input
             type="text"
             value={userDetails.lastName}
-            onChange={(e) =>
-              setUserDetails({ ...userDetails, lastName: e.target.value })
-            }
+            onChange={(e) =>setUserDetails({ ...userDetails, lastName: e.target.value })}
           />
         </div>
         <div>
@@ -44,14 +38,11 @@ function SignUp() {
           <input
             type="email"
             value={userDetails.email}
-            onChange={(e) =>
-              setUserDetails({ ...userDetails, email: e.target.value })
-            }
+            onChange={(e) =>setUserDetails({ ...userDetails, email: e.target.value })}
           />
         </div>
-        <button type="button" onClick={handleSignUp}>
-          Sign Up
-        </button>
+
+        <button type="button" onClick={handleSignUp}>Sign Up</button>
       </form>
     </div>
   );
