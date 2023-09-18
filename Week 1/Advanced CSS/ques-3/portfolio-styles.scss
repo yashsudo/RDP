@@ -1,0 +1,110 @@
+// Variables
+$primary-color: #333;
+$secondary-color: #fff;
+$accent-color: #e74c3c;
+$accent-hover-color: #c0392b;
+
+// Mixins
+@mixin button-style {
+  background-color: $accent-color;
+  color: $secondary-color;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $accent-hover-color;
+  }
+}
+
+// Reset some default styles
+html, body, header, main, section, footer {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: $primary-color;
+  color: $secondary-color;
+  padding: 1rem;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+nav a {
+  color: $secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+main {
+  padding: 2rem;
+
+  h2 {
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+}
+
+.project {
+  margin-bottom: 2rem;
+  width: fit-content;
+
+  img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: $primary-color;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+form button {
+  @include button-style;
+}
+
