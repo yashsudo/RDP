@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Grid Layout</title>
+    <style>
+
+        .grid-container {
+            display: grid;
+            grid-gap: 10px;
+        }
+        
+        .grid-item {
+            background-color: #f28f8f;
+            border-radius: 7%;
+            padding: 10px;
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+        }
+
+        /* For wider screens (4 columns) */
+        @media screen and (min-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* For medium screens (2 columns) */
+        @media screen and (max-width: 1023px) and (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* For smaller screens (1 column) */
+        @media screen and (max-width: 767px) {
+            .grid-container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+        <div class="grid-item"></div>
+    </div>
+</body>
+</html>
